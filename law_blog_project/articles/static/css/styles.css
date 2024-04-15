@@ -1,0 +1,21 @@
+.article-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.article-list li {
+    margin-bottom: 20px;
+}
+
+.article-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.article-author {
+    font-style: italic;
+}
+
+.article-detail {
+    margin-top: 30px;
+}
