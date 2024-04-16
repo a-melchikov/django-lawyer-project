@@ -5,13 +5,17 @@
 {% block content %}
     <div class="container">
         <h1 class="mt-5">Список статей</h1>
-        <ul class="article-list">
-            {% for article in object_list %}
-                <li>
-                    <h2 class="article-title"><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
-                    <p class="article-author">Автор: {{ article.author }}</p>
-                </li>
-            {% endfor %}
-        </ul>
+        {% if object_list %}
+            <ul class="article-list">
+                {% for article in object_list %}
+                    <li>
+                        <h2 class="article-title"><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+                        <p class="article-author">Автор: {{ article.author }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>На данный момент нет доступных статей.</p>
+        {% endif %}
     </div>
 {% endblock %}
